@@ -185,9 +185,6 @@ img {
   background-position: center;
   background-repeat: no-repeat;
   z-index: 0;
-  will-change: transform;
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
 }
 
 .hero__background::before {
@@ -203,7 +200,6 @@ img {
     rgba(241, 237, 228, 0.4) 50%,
     rgba(59, 129, 123, 0.1) 100%
   );
-  backdrop-filter: blur(0.5px);
 }
 
 .hero__content {
@@ -761,6 +757,9 @@ img {
   }
   .hero__background {
     background-position: center center;
+  }
+  .hero__background::before {
+    display: none;
   }
   .profile-section {
     grid-template-columns: 1fr;
